@@ -56,7 +56,7 @@ form.appendChild(help)
 
 $(document).ready(function () {
     $("#subBtn").click(function (e) {
-        e.preventDefault();
+        // e.preventDefault();
 
         var u_text = $("#userName").val();
         var p_text = $("#password").val();
