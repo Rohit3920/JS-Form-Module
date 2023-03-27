@@ -36,11 +36,23 @@ subBtn.value = "SUBMIT";
 subBtn.id = "subBtn";
 subBtn.className = "bg-primary";
 
+let passReset = document.createElement("a");
+passReset.className = "passReset"
+passReset.href = "#"
+passReset.innerHTML = "Forget Password ?"
+
+let help = document.createElement("a");
+help.className = "help"
+help.href = "#"
+help.innerHTML = "May I Help You?"
+
 document.body.appendChild(form);
 form.appendChild(f_name)
 form.appendChild(userName);
 form.appendChild(pass)
+form.appendChild(passReset)
 form.appendChild(subBtn)
+form.appendChild(help)
 
 $(document).ready(function () {
     $("#subBtn").click(function (e) {

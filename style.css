@@ -1,58 +1,80 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
-body{
+
+body {
     text-align: center;
     font-size: 18px;
 }
 
-form{
+form {
     width: 400px;
     height: 400px;
-    margin: 20px auto ;
+    margin: 20px auto;
     border-radius: 20px;
-    padding: 20PX;
+    padding: 20px;
     border: 1px solid black;
     background-color: darkslategray;
     /* position: relative; */
-
-
 }
 
-form h1{
+form h1 {
     text-align: center;
     color: white;
     text-transform: uppercase;
 }
 
-form:hover > h1{
+form:hover>h1 {
     color: black;
 }
 
-form input{
+form input {
     margin: 20px auto 10px auto;
     display: block;
     background-color: transparent;
     padding: 4px;
     border: none;
-    border-bottom: 1px solid rgb(255, 255, 255) ;
+    border-bottom: 1px solid rgb(255, 255, 255);
     outline: none;
     border-radius: 5px;
 }
 
-form input[type= "submit"]{
+form input[type="submit"] {
     color: white;
-    border: none;
+    border: 0.05px solid #007bff;
     background-color: blue;
+    margin: 50px auto 0 auto;
     padding: 8px;
     font-weight: 700;
 }
 
-form input[type= "submit"]:hover{
-    padding: 6px;
-
+form input[type="submit"]:hover {
+    color: rgba(0, 0, 255, 0.8);
+    border-color: rgba(0, 0, 255, 0.425);
+    box-shadow: 1px 1px 1px 0 rgba(0, 0, 255, 0.8);
 }
-input::placeholder{
+
+input::placeholder {
     color: black;
+}
+
+.passReset {
+    color: black;
+    float: left;
+    font-size: 15px;
+    margin: 10px 0 0 20px;
+}
+
+.help {
+    color: black;
+    font-size: 15px;
+    margin: 40px auto 0 auto;
+    text-decoration: none;
+}
+
+.help:hover,
+.passReset:hover {
+    color: white;
+    text-decoration: none;
 }
