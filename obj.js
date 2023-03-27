@@ -22,5 +22,13 @@ export var objects = [
 {
     u: "roshan",
     p: "r1234"
+},
+{
+    u: "shravan",
+    p: "s1234"
+},
+{
+    u: "maruti",
+    p: "m1234"
 }
 ]
