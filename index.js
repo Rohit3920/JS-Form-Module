@@ -30,6 +30,15 @@ pass.id = "password";
 pass.placeholder = "Your Password";
 pass.required = true;
 
+let spanUser = document.createElement("span");
+spanUser.id = "spanUser";
+// spanUser.innerText = " User not found"
+
+let spanPass = document.createElement("span");
+spanPass.id = "spanPass";
+// spanPass.innerText = " wrong password"
+
+
 let subBtn = document.createElement("input");
 subBtn.type = "submit";
 subBtn.value = "SUBMIT";
@@ -49,14 +58,16 @@ help.innerHTML = "May I Help You?"
 document.body.appendChild(form);
 form.appendChild(f_name)
 form.appendChild(userName);
+form.appendChild(spanUser)
 form.appendChild(pass)
+form.appendChild(spanPass)
 form.appendChild(passReset)
 form.appendChild(subBtn)
 form.appendChild(help)
 
 $(document).ready(function () {
     $("#subBtn").click(function (e) {
-        // e.preventDefault();
+        e.preventDefault();
 
         var u_text = $("#userName").val();
         var p_text = $("#password").val();
@@ -68,15 +79,24 @@ $(document).ready(function () {
             var obb = objects[i];
             var user = obb.u;
             var uPass = obb.p;
+
+            spanPass.innerText = "";
+            spanUser.innerText = "";
+
+
             if (user == u_text)
                 break;
         }
         if (user == u_text && uPass == p_text) {
-            alert("login successfully");
+            spanPass.innerText = " ";
+            spanUser.innerText = " ";
+                alert("login successfully");
         } else if (user == u_text && uPass != p_text) {
-            alert("Your Password is Invalid")
+            spanPass.innerText = "Your Password is Invalid"
+            // alert("Your Password is Invalid")
         } else {
-            alert("user not found");
+            spanUser.innerText = "user not found"
+            // alert("user not found");
         }
 
 

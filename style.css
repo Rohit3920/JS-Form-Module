@@ -10,8 +10,9 @@ body {
 
 form {
     width: 400px;
-    height: 400px;
+    height: 450px;
     margin: 20px auto;
+    position: relative;
     border-radius: 20px;
     padding: 20px;
     border: 1px solid black;
@@ -20,8 +21,10 @@ form {
 }
 
 form h1 {
-    text-align: center;
     color: white;
+    position: absolute;
+    top: 10;
+    left: 20%;
     text-transform: uppercase;
 }
 
@@ -30,7 +33,7 @@ form:hover>h1 {
 }
 
 form input {
-    margin: 20px auto 10px auto;
+    margin: 60px auto 0px auto;
     display: block;
     background-color: transparent;
     padding: 4px;
@@ -40,11 +43,15 @@ form input {
     border-radius: 5px;
 }
 
+form input[type="password"]{
+    margin-top: 20px;
+}
+
 form input[type="submit"] {
     color: white;
     border: 0.05px solid #007bff;
     background-color: blue;
-    margin: 50px auto 0 auto;
+    margin: 40px auto 0 auto;
     padding: 8px;
     font-weight: 700;
 }
@@ -61,15 +68,16 @@ input::placeholder {
 
 .passReset {
     color: black;
-    float: left;
+    position: absolute;
+left: 10px;
     font-size: 15px;
-    margin: 10px 0 0 20px;
+    margin: 30px 0 0 20px;
 }
 
 .help {
     color: black;
     font-size: 15px;
-    margin: 40px auto 0 auto;
+    margin: 160px auto 0 auto;
     text-decoration: none;
 }
 
@@ -77,4 +85,12 @@ input::placeholder {
 .passReset:hover {
     color: white;
     text-decoration: none;
+}
+
+span{
+    font-size: 14px;
+    color: red;
+    padding: 0px 55px 0px 55px;
+    border-radius: 0 0 8px 8px;
+    border-top: none;
 }
