@@ -32,12 +32,9 @@ pass.required = true;
 
 let spanUser = document.createElement("span");
 spanUser.id = "spanUser";
-// spanUser.innerText = " User not found"
 
 let spanPass = document.createElement("span");
 spanPass.id = "spanPass";
-// spanPass.innerText = " wrong password"
-
 
 let subBtn = document.createElement("input");
 subBtn.type = "submit";
@@ -72,17 +69,10 @@ $(document).ready(function () {
         var u_text = $("#userName").val();
         var p_text = $("#password").val();
 
-
-
-
         for (var i = 0; i < objects.length; i++) {
             var obb = objects[i];
             var user = obb.u;
             var uPass = obb.p;
-
-            spanPass.innerText = "";
-            spanUser.innerText = "";
-
 
             if (user == u_text)
                 break;
@@ -98,8 +88,6 @@ $(document).ready(function () {
             spanUser.innerText = "user not found"
             // alert("user not found");
         }
-
-
     });
 });
 
